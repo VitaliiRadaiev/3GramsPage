@@ -8,6 +8,7 @@
 		<!-- <meta name="robots" content="noindex, nofollow"> -->
 		<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
 		<!-- <link rel="shortcut icon" href="favicon.ico"> -->
+	
 		<link rel="stylesheet" href="css/style.min.css">
 	</head>
 	<body>
@@ -39,9 +40,10 @@
 					<li class="menu-header2__item shop-header2 accordion">
 						<a href="#" class="menu-header2__link shop-header2__title spoller">
 							SHOP
-							<span class="shop-header2__chevron"> 
+							<span class="icon-keyboard_arrow_down"></span>
+							<!-- <span class="shop-header2__chevron"> 
 								<img src="img/header/chevron.png" alt="chevron">
-							</span>
+							</span> -->
 <!-- 							<span class="shop-header2__arrow-mobile_right"> 
 								<img src="img/header/arrow-mobil-right.svg" alt="chevron">
 							</span>
@@ -52,15 +54,27 @@
 						<div class="shop-header2__collapse">
 							<div class="shop-header2__wrap">
 								<ul class="shop-header2__list">
-									<li class="shop-header2__item"><a href="#" class="shop-header2__link">peak</a></li>
-									<li class="shop-header2__item"><a href="#" class="shop-header2__link">carta</a></li>
-									<li class="shop-header2__item"><a href="#" class="shop-header2__link">other devices</a></li>
-									<li class="shop-header2__item"><a href="#" class="shop-header2__link">tool/merch</a></li>
-									<li class="shop-header2__item"><a href="#" class="shop-header2__link">shop all</a></li>
+									<li class="shop-header2__item">
+										<a href="#" class="shop-header2__link" data-urlImg="img/header/shop-img.jpg" data-urlLinkForImg="#">peak</a>
+									</li>
+									<li class="shop-header2__item">
+										<a href="#" class="shop-header2__link" data-urlImg="img/header/shop-img.jpg,img/product-card/04.jpg,   img/product-card/02.jpg" data-urlLinkForImg="#,#sdf,#test">carta</a>
+									</li>
+									<li class="shop-header2__item">
+										<a href="#" class="shop-header2__link" data-urlImg="img/product-card/01.jpg" data-urlLinkForImg="#">other devices</a>
+									</li>
+									<li class="shop-header2__item">
+										<a href="#" class="shop-header2__link" data-urlImg="img/header/shop-img.jpg,img/product-card/03.jpg" data-urlLinkForImg="#,#">tool/merch</a> 
+									</li>
+									<li class="shop-header2__item">
+										<a href="#" class="shop-header2__link shop-header2__link_shop">shop all</a>
+									</li>
 								</ul>
 								<div class="shop-header2__img-wrap ibg">
 									<div class="shop-header2__img ibg">
-										<img src="img/header/shop-img.jpg" alt="photo">
+										<a href="#">
+											<img src="img/header/shop-img.jpg" alt="photo">
+										</a>
 									</div>
 								</div>
 							</div>
