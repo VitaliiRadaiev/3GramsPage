@@ -1134,13 +1134,16 @@ let priceSlider = document.querySelector('.price-filter__slider');
 if(priceSlider) {
 	let inputNumFrom = document.getElementById('priceStart');
 	let inputNumTo = document.getElementById('priceEnd');
-	
+	let value = document.querySelector('.values-price-filter');
+
+	let min = value.dataset.min;
+	let max = value.dataset.max;
 	noUiSlider.create(priceSlider, {
 		start: [10, 100],
 		connect: true,
 		range: {
-			'min': [10],
-			'max': [100],
+			'min': [+min],
+			'max': [+max],
 		}
 	});
 
@@ -1177,6 +1180,34 @@ if(priceSlider) {
 		  priceSlider.noUiSlider.set([priceStartValue, priceEndValue])
 	}
 }
+
+// @media (min-width: 992px ) {
+// 	&:hover {
+// 		background-color: $mainColor;
+// 		color: #000000;
+// 		border:2px solid $mainColor;
+// 	}
+// }
+	// ====  filter-slider price btn click animation ===============
+	{
+	let ilterSliderBtn = document.querySelector('.price-filter__btn');
+		if(ilterSliderBtn) {
+			ilterSliderBtn.addEventListener('mousedown', function() {
+				ilterSliderBtn.style.backgroundColor = '#71eeb8';
+				ilterSliderBtn.style.border = '2px solid #71eeb8';
+			});
+
+			ilterSliderBtn.addEventListener('mouseup', function() {
+				ilterSliderBtn.style.backgroundColor = 'rgba(255, 255, 255, 0.278)';
+				ilterSliderBtn.style.border = '2px solid #000';
+			})
+		}
+	}
+
+	// ==== //  filter-slider price btn click animation ===============
+
+
+
 // ==== //  filter-slider =======================================================
 
 
