@@ -416,8 +416,8 @@ template {
 
 @font-face {
   font-family: 'icomoon';
-  src: url("../fonts/icomoon.eot?1lg1sg");
-  src: url("../fonts/icomoon.eot?1lg1sg#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?1lg1sg") format("truetype"), url("../fonts/icomoon.woff?1lg1sg") format("woff"), url("../fonts/icomoon.svg?1lg1sg#icomoon") format("svg");
+  src: url("../fonts/icomoon.eot?s50zsi");
+  src: url("../fonts/icomoon.eot?s50zsi#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?s50zsi") format("truetype"), url("../fonts/icomoon.woff?s50zsi") format("woff"), url("../fonts/icomoon.svg?s50zsi#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -468,6 +468,10 @@ template {
 
 .icon-arrow-left:before {
   content: "\e906";
+}
+
+.icon-check:before {
+  content: "\e909";
 }
 
 .icon-facebook-with-circle:before {
@@ -2418,17 +2422,34 @@ textarea.input {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-left: 14px;
 }
 
 .shop-header2__img {
-  width: 180px;
+  width: 208px;
   height: 241px;
-  display: inline-block;
-  margin-right: 15px;
+  display: block;
+  padding: 0 14px;
+  position: relative;
 }
 
-.shop-header2__img.shop-header2__img_animation {
+.shop-header2__img:not(:last-child):after {
+  position: absolute;
+  content: '';
+  background-image: url("../img/header/border-new.png");
+  background-size: 100% 100%;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 1px;
+}
+
+.shop-header2__img > a {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.shop-header2__img .shop-header2__img_animation {
   -webkit-animation-name: shopheaderanimation;
           animation-name: shopheaderanimation;
   -webkit-animation-duration: 2s;
@@ -3698,7 +3719,7 @@ textarea.input {
 }
 
 .slider-product-card__inner.border {
-  border: 1px solid #71eeb8;
+  border: 1px solid #000;
 }
 
 .slier-product-card-controller {
@@ -3846,6 +3867,32 @@ textarea.input {
   width: 30px;
   cursor: pointer;
   border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.choose-color__item.active:before {
+  content: "\e909";
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 20px;
+  color: #fff;
 }
 
 .choose-color__item:not(:last-child) {
@@ -5881,10 +5928,16 @@ textarea.input {
 }
 
 .billing-details-select__select .select-options {
-  -webkit-box-shadow: 0 10px 11px -10px #7a7a7a;
-          box-shadow: 0 10px 11px -10px #7a7a7a;
+  -webkit-box-shadow: 0 3px 9px -4px #7a7a7a;
+          box-shadow: 0 3px 9px -4px #7a7a7a;
   border-radius: 5px;
   border: none;
+  min-width: 101.4%;
+  -webkit-transform: translateX(-0.7%);
+      -ms-transform: translateX(-0.7%);
+          transform: translateX(-0.7%);
+  padding: 21px 20px 10px 22px;
+  margin-top: 5px;
 }
 
 .billing-details-select__select .select-options__value {
@@ -5893,7 +5946,7 @@ textarea.input {
   line-height: 21px;
   text-transform: uppercase;
   letter-spacing: 0.8px;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
 }
 
 .billing-details-select__select .select-options-scroll {
@@ -6358,10 +6411,16 @@ textarea.input {
 }
 
 .form-contact-select__select .select-options {
-  -webkit-box-shadow: 0 10px 11px -10px #7a7a7a;
-          box-shadow: 0 10px 11px -10px #7a7a7a;
+  -webkit-box-shadow: 0 3px 9px -4px #7a7a7a;
+          box-shadow: 0 3px 9px -4px #7a7a7a;
   border-radius: 5px;
   border: none;
+  min-width: 101.4%;
+  -webkit-transform: translateX(-0.7%);
+      -ms-transform: translateX(-0.7%);
+          transform: translateX(-0.7%);
+  padding: 21px 20px 10px 22px;
+  margin-top: 5px;
 }
 
 .form-contact-select__select .select-options__value {
@@ -6370,11 +6429,11 @@ textarea.input {
   line-height: 21px;
   text-transform: uppercase;
   letter-spacing: 0.8px;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
 }
 
 .form-contact-select__select .select-options-scroll {
-  min-height: 170px;
+  min-height: 155px;
 }
 
 .form-contact__options {

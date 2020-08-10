@@ -816,8 +816,8 @@ if ($('.accordion').length>0) {
 
 		arrUrls.forEach(i => {
 			let div = document.createElement('div');
-			div.className = 'shop-header2__img ibg shop-header2__img_animation';
-			div.innerHTML =  '<a href="'+ i.urlLink +'"><img src="' + i.urlImg + '" alt="photo"></a>'
+			div.className = 'shop-header2__img';
+			div.innerHTML =  '<a class="ibg shop-header2__img_animation" href="'+ i.urlLink +'"><img src="' + i.urlImg + '" alt="photo"></a>'
 
 			imgBox.append(div);
 		})
@@ -847,8 +847,8 @@ if ($('.accordion').length>0) {
 
 				arrUrls.forEach(i => {
 					let div = document.createElement('div');
-					div.className = 'shop-header2__img ibg shop-header2__img_animation';
-					div.innerHTML =  '<a href="'+ i.urlLink +'"><img src="' + i.urlImg + '" alt="photo"></a>'
+					div.className = 'shop-header2__img';
+					div.innerHTML =   '<a class="ibg shop-header2__img_animation" href="'+ i.urlLink +'"><img src="' + i.urlImg + '" alt="photo"></a>'
 
 					imgBox.append(div);
 				})
@@ -1123,7 +1123,16 @@ if(chooseColorBox) {
 	chooseColorList.addEventListener('click', function(e) {
 		if(e.target.closest('.choose-color__item')) {
 			let item = e.target.closest('.choose-color__item');
+			item.classList.add('active');
 			titleSpan.innerText = item.dataset.colorname;
+
+			for(let i of chooseColorList.children) {
+				if(i == item) {
+					continue;
+				}
+
+				i.classList.remove('active');
+			}
 		}
 	})
 }
@@ -1475,9 +1484,11 @@ if(priceSlider) {
 	if(baskedIcon) {
 
 		baskedIcon.addEventListener('mouseover', function() {
-			hoverBascet.style.display = 'block';
-			hoverBascet.style.opacity = '1';
-			$(".hover-bascet__list").niceScroll(selectscrolloptions('6px'));
+			if(document.documentElement.clientWidth >= 992) {
+				hoverBascet.style.display = 'block';
+				hoverBascet.style.opacity = '1';
+				$(".hover-bascet__list").niceScroll(selectscrolloptions('6px'));
+			}
 		});
 
 		baskedIcon.addEventListener('mouseout', function() {
