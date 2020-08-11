@@ -1881,10 +1881,10 @@ let ilterSliderBtn = document.querySelector('.form-contact__submit');
 			    map: map,
 
 			    // Пишем название маркера - появится если навести на него курсор и немного подождать
-			    title: '',
+			    //title: '',
 
 			    // Укажем свою иконку для маркера
-			    icon: '../img/contact/googlMarker.svg',
+			    icon: 'img/contact/googlMarker.svg',
 			});
 
 		}
