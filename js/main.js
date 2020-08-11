@@ -1652,6 +1652,11 @@ let ilterSliderBtn = document.querySelector('.form-contact__submit');
 			lng: -80.057007,
 		}
 
+		if(document.documentElement.clientWidth <= 767) {
+			center.lat = 26.613380;
+			center.lng = -80.061003;
+		}
+
 		let markerPosition = {
 			lat: 26.613380,
 			lng: -80.061003,
@@ -1669,6 +1674,10 @@ let ilterSliderBtn = document.querySelector('.form-contact__submit');
 				adress.innerHTML = '<span><img src="img/contact/marker.png" alt="marker"></span>3GRAMS INC. West Palm Beach, Florida 33460';
 				center.lat = 26.636016;
 				center.lng = -80.057007;
+				if(document.documentElement.clientWidth <= 767) {
+					center.lat = 26.613380;
+					center.lng = -80.061003;
+				}
 				markerPosition.lat = 26.613380;
 				markerPosition.lng = -80.061003;
 				initMap()
