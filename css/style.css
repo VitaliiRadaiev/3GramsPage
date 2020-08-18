@@ -2915,12 +2915,14 @@ textarea.input {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 30px;
           flex: 0 0 30px;
+  outline: none;
 }
 
 .search__input {
   height: 50px;
   color: #000;
   border-bottom: 1px solid black;
+  outline: none;
 }
 
 .search__btn {
