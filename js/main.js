@@ -1485,7 +1485,7 @@ if(priceSlider) {
 
 		baskedIcon.addEventListener('mouseover', function() {
 			
-				hoverBascet.style.display = 'block';
+				hoverBascet.style.display = 'flex';
 				hoverBascet.style.opacity = '1';
 				$(".hover-bascet__list").niceScroll(selectscrolloptions('6px'));
 		});
