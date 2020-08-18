@@ -43,6 +43,11 @@
 							<span class="icon-keyboard_arrow_down"></span>
 						</a>
 						<div class="shop-header2__collapse">
+
+							<!-- ====== close btn ======================================================= -->
+							<div class="shop-header2-collapse-btn"></div>
+							<!-- ====== close btn ======================================================= -->
+
 							<div class="shop-header2__wrap">
 								<ul class="shop-header2__list">
 									<li class="shop-header2__item">
@@ -106,8 +111,9 @@
 							<span class="basket__amount">4</span> 
 						</a>
 						<div class="hover-bascet">
-							<ul class="hover-bascet__list">
-								<li class="hover-bascet__item">
+
+							 <ul class="hover-bascet__list">
+								<!-- <li class="hover-bascet__item">
 									<div class="hover-bascet__card card-bascet">
 										<div class="card-bascet__column card-bascet__column_1">
 											<div class="card-bascet__img ibg">
@@ -220,8 +226,24 @@
 											</div>
 										</div>
 									</div>
+								</li> -->
+
+
+								<!-- ======== is empty ======================================================== -->
+								<li class="isEmpty-miniCart">
+									<div class="isEmpty-miniCart__title">
+										SHOPPING CART
+									</div>
+									<div class="isEmpty-miniCart__message">
+										<p>Your cart is currently empty.</p>
+										<p><b>Continue browsing here</b></p>
+									</div>
 								</li>
-							</ul>
+
+								<!-- ======== is empty ======================================================== -->
+
+							</ul> 
+
 							<div class="hover-bascet__btn-wrap">
 								<div class="hover-bascet__btn-view-cart btn">
 									<a href="#">
@@ -274,20 +296,20 @@
 
  				  				<form action="/" class="contact__form form-contact">
  				  					<div class="form-contact__input-item">
- 				  						<input autocomplete="off" type="text" name="form[]" data-value="Your name" class="form-contact__input input req">
+ 				  						<input autocomplete="off" type="text" name="name" data-value="Your name" class="form-contact__input input req">
  				  					</div>
  				  					<div class="form-contact__input-item">
- 				  						<input autocomplete="off" type="text" name="form[]" data-value="Order number" class="form-contact__input input num req">
+ 				  						<input autocomplete="off" type="text" name="order" data-value="Order number" class="form-contact__input input num req">
  				  					</div>
 									<div class="form-contact__input-item">
-										<input autocomplete="off" type="text" name="form[]" data-value="Your email" class="form-contact__input input email req">
+										<input autocomplete="off" type="text" name="email" data-value="Your email" class="form-contact__input input email req">
 									</div>
 									<div class="form-contact__input-item">
-										<input autocomplete="off" type="text" name="form[]" data-value="Phone number" class="form-contact__input input phone req">
+										<input autocomplete="off" type="text" name="phone" data-value="Phone number" class="form-contact__input input phone req">
 									</div>
 									
 									<div class="form-contact__input-item">
-										<select name="form[]" class="form-contact-select">
+										<select name="select" class="form-contact-select">
 											<option value="1" selected="selected">Sales</option>
 											<option value="2">Sales</option>
 											<option value="3">Warranty Support</option>
@@ -298,7 +320,7 @@
 
 									<div class="form-contact__input-item">
 										<div class="form-contact__input__textarea-wrap">
-											<textarea name="form[]" data-value="How can we halp? " class="form-contact__input_textarea textarea"></textarea>
+											<textarea name="text" data-value="How can we halp? " class="form-contact__input_textarea textarea"></textarea>
 											
 										</div>
 									</div>
